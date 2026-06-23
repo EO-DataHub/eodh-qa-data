@@ -1,0 +1,216 @@
+{
+    "eodh_data_collection": "SkySatCollect",
+    "data_id_field": "https://eodatahub.org.uk/api/catalogue/stac/catalogs/commercial/catalogs/planet/collections/SkySatCollect",
+    "uuid": "uuid",
+    "qa_check_name": "Quality Processes Review (QPR)",
+    "qa_check_results": {
+        "product_information": {
+            "product_details": {
+                "value": "excellent",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://docs.planet.com/data/imagery/skysat/",
+                        "title": "Understanding SkySat Instruments: SkySat. Planet Documentation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf",
+                        "title": "Planet Imagery Product Specifications, December 2023"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://assets.planet.com/docs/radiometric_calibration_white_paper.pdf",
+                        "title": "On-Orbit Radiometric Calibration of the Planet Satellite Fleet"
+                    }
+                ]
+            },
+            "availability_and_accessability": {
+                "value": "basic",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://doi.org/10.1038/sdata.2016.18",
+                        "title": "Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016)"
+                    }
+                ]
+            },
+            "product_format_flags_and_metadata": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://docs.ogc.org/bp/06-080r2/06-080r2.pdf",
+                        "title": "OGC GML 3.1.1 Application Schema for Earth Observation Products"
+                    }
+                ]
+            },
+            "user_documentation": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://docs.planet.com/data/imagery/skysat/",
+                        "title": "Understanding SkySat Instruments: SkySat. Planet Documentation"
+                    }
+                ]
+            }
+        },
+        "metrology": {
+            "radiometric_calibration_and_characterisation": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://assets.planet.com/docs/radiometric_calibration_white_paper.pdf",
+                        "title": "On-Orbit Radiometric Calibration of the Planet Satellite Fleet"
+                    }
+                ]
+            },
+            "geometric_calibration_and_characterisation": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    }
+                ]
+            },
+            "metrological_traceability_documentation": {
+                "value": "not assessable",
+                "links": []
+            },
+            "uncertainty_characterisation": {
+                "value": "basic",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf",
+                        "title": "Planet Imagery Product Specifications, December 2023"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://assets.planet.com/docs/radiometric_calibration_white_paper.pdf",
+                        "title": "On-Orbit Radiometric Calibration of the Planet Satellite Fleet"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf/cb0ef43f-baa5-11cf-3f85-4dcd86f77bd6",
+                        "title": "JCGM, “Evaluation of measurement data - Guide to the expression of uncertainty in measurement,” JCGM, vol. 100, 2008"
+                    }
+                ]
+            },
+            "ancillary_data": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://docs.planet.com/data/imagery/skysat/",
+                        "title": "Understanding SkySat Instruments: SkySat. Planet Documentation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf",
+                        "title": "Planet Imagery Product Specifications, December 2023"
+                    }
+                ]
+            }
+        },
+        "product_generation": {
+            "calibration_algorithm": {
+                "value": "excellent",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf",
+                        "title": "Planet Imagery Product Specifications, December 2023"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://assets.planet.com/docs/radiometric_calibration_white_paper.pdf",
+                        "title": "On-Orbit Radiometric Calibration of the Planet Satellite Fleet"
+                    }
+                ]
+            },
+            "geometric_processing": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf",
+                        "title": "Planet Imagery Product Specifications, December 2023"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://assets.planet.com/docs/radiometric_calibration_white_paper.pdf",
+                        "title": "On-Orbit Radiometric Calibration of the Planet Satellite Fleet"
+                    }
+                ]
+            },
+            "retrieval_algorithm": {
+                "value": "not assessed",
+                "links": []
+            },
+            "product_specific_processing": {
+                "value": "good",
+                "links": [
+                    {
+                        "type": "application/pdf",
+                        "href": "https://support.planet.com/hc/en-us/articles/360037649594-L1-Data-Quality-Report-for-the-SkySat-Constellation",
+                        "title": "Planet L1 Data Quality Q2 2025 Report, Status of Calibration and Data Quality for the SkySat Constellation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "https://docs.planet.com/data/imagery/skysat/",
+                        "title": "Understanding SkySat Instruments: SkySat. Planet Documentation"
+                    },
+                    {
+                        "type": "application/pdf",
+                        "href": "assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf",
+                        "title": "Planet Imagery Product Specifications, December 2023"
+                    }
+                ]
+            }
+        }
+    },
+    "information": "Result criteria follows EDAP EO Mission Quality Assessment Framework - Optical Guidelines, found at: https://earth.esa.int/eogateway/documents/20142/37627/Optical+Mission+Quality+Assessment+Guidelines.pdf/1c269f3f-9e54-9532-b30b-0c884de1431a",
+    "qa_check_datetime": "2026-02-22",
+    "publisher": "Climate and Earth Observation Group, National Physical Laboratory",
+    "eodh_qa_check_version": 1.0
+}
