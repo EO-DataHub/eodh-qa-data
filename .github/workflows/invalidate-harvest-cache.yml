@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -28,8 +28,10 @@ jobs:
       - name: Invalidate harvest cache entries
         env:
           BUCKET: ${{ vars.HARVESTED_METADATA_BUCKET }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.event.after }}
         run: |
-          changed=$(git diff --name-only HEAD~1 HEAD -- qa_documentation/ qa_radiometric/)
+          changed=$(git diff --name-only "$BEFORE_SHA" "$AFTER_SHA" -- qa_documentation/ qa_radiometric/)
 
           if [ -z "$changed" ]; then
             echo "No QA files changed, skipping."
@@ -68,7 +70,7 @@ jobs:
 
             for qa_key in ${keys_to_invalidate[$metadata_key]}; do
               updated=$(mktemp)
-              jq --arg k "$qa_key" 'with_entries(select(.key | endswith($k + ".json") | not))' "$tmp" > "$updated"
+              jq -c --arg k "$qa_key" 'with_entries(select(.key | endswith($k + ".json") | not))' "$tmp" > "$updated"
               rm "$tmp"
               tmp="$updated"
             done
