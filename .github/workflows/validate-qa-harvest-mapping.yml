@@ -1,0 +1,51 @@
+name: Validate QA harvest mapping
+
+on:
+  pull_request:
+    paths:
+      - "qa_documentation/**"
+      - "qa_radiometric/**"
+      - "harvester-map.json"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: |
+          shopt -s nullglob
+          status=0
+
+          for file in qa_documentation/*.json qa_radiometric/*.json harvester-map.json; do
+            if ! error=$(jq empty "$file" 2>&1); then
+              echo "::error file=$file::Invalid JSON: $error"
+              status=1
+            fi
+          done
+
+          exit $status
+
+      - name: Validate harvester-map coverage
+        run: |
+          shopt -s nullglob
+          status=0
+
+          for file in qa_documentation/*.json qa_radiometric/*.json; do
+            stem=$(basename "$file" .json)
+            qa_key="${stem%_qa_check_quality_processes_review}"
+            qa_key="${qa_key%_qa_check_radiometric_unc_all_dates}"
+
+            metadata_key=$(jq -r --arg k "$qa_key" '.[$k].harvested_metadata_key // empty' harvester-map.json)
+
+            if [ -z "$metadata_key" ]; then
+              echo "::error file=$file::No harvester-map.json entry for '$qa_key' - the invalidate-harvest-cache workflow will silently skip this file on merge."
+              status=1
+            fi
+          done
+
+          exit $status

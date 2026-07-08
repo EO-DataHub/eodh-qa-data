@@ -1,0 +1,21 @@
+{
+  "sentinel2_l1c": {
+    "harvested_metadata_key": "harvested-metadata/https:api.stac.ceda.ac.uk",
+    "collection_id": "sentinel2_ard"
+  },
+  "airbus_phr_data": {
+    "harvested_metadata_key": "harvested-metadata/airbus_phr_data"
+  },
+  "airbus_pneo_data": {
+    "harvested_metadata_key": "harvested-metadata/airbus_pneo_data"
+  },
+  "airbus_spot_data": {
+    "harvested_metadata_key": "harvested-metadata/airbus_spot_data"
+  },
+  "PSScene": {
+    "harvested_metadata_key": "harvested-metadata/planet"
+  },
+  "SkySatCollect": {
+    "harvested_metadata_key": "harvested-metadata/planet"
+  }
+}

@@ -1,0 +1,83 @@
+name: Invalidate harvest cache
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "qa_documentation/**"
+      - "qa_radiometric/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  invalidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Invalidate harvest cache entries
+        env:
+          BUCKET: ${{ vars.HARVESTED_METADATA_BUCKET }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.event.after }}
+        run: |
+          changed=$(git diff --name-only "$BEFORE_SHA" "$AFTER_SHA" -- qa_documentation/ qa_radiometric/)
+
+          if [ -z "$changed" ]; then
+            echo "No QA files changed, skipping."
+            exit 0
+          fi
+
+          declare -A keys_to_invalidate
+
+          while IFS= read -r file; do
+            stem=$(basename "$file" .json)
+            qa_key="${stem%_qa_check_quality_processes_review}"
+            qa_key="${qa_key%_qa_check_radiometric_unc_all_dates}"
+
+            metadata_key=$(jq -r --arg k "$qa_key" '.[$k].harvested_metadata_key // empty' harvester-map.json)
+
+            if [ -z "$metadata_key" ]; then
+              echo "WARNING: no harvester-map entry for '$qa_key' (from $file), skipping."
+              continue
+            fi
+
+            collection_id=$(jq -r --arg k "$qa_key" '.[$k].collection_id // $k' harvester-map.json)
+            keys_to_invalidate["$metadata_key"]+="$collection_id "
+          done <<< "$changed"
+
+          if [ ${#keys_to_invalidate[@]} -eq 0 ]; then
+            echo "No mapped harvester keys found, nothing to invalidate."
+            exit 0
+          fi
+
+          for metadata_key in "${!keys_to_invalidate[@]}"; do
+            s3_uri="s3://${BUCKET}/${metadata_key}"
+            tmp=$(mktemp)
+
+            echo "Fetching $s3_uri ..."
+            aws s3 cp "$s3_uri" "$tmp"
+
+            for qa_key in ${keys_to_invalidate[$metadata_key]}; do
+              updated=$(mktemp)
+              jq -c --arg k "$qa_key" 'with_entries(select(.key | endswith($k + ".json") | not))' "$tmp" > "$updated"
+              rm "$tmp"
+              tmp="$updated"
+            done
+
+            echo "Writing updated metadata back to $s3_uri ..."
+            aws s3 cp "$tmp" "$s3_uri"
+            rm "$tmp"
+
+            echo "Invalidated entries matching: ${keys_to_invalidate[$metadata_key]}from $metadata_key"
+          done
