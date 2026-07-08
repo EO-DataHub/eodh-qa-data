@@ -116,12 +116,7 @@ Airbus collections are harvested monthly — a file deposited shortly after a ha
 
 Each harvester tracks what it has already processed by storing a hash of each file in an S3 folder called `harvested-metadata`. On every run it compares the current hash against the stored one and only re-processes files that have changed.
 
-If you deposit a QA file but the collection record is not updated after the next scheduled run (e.g. the collection was already harvested with no QA assets and the source data has not changed), you can force re-processing by removing the collection's entry from the harvested-metadata store:
-
-- **Re-harvest all files for a source** — delete the metadata object at `harvested-metadata/{source_identifier}` in the harvester's S3 bucket. On the next run the harvester treats every file as new.
-- **Re-harvest a single collection** — edit the JSON at that S3 key and remove just the entry for the collection's key. Only that collection will be re-processed.
-
-The harvest-transformer itself does not read or write `harvested-metadata` — this is purely a harvester concern.
+> **Automatic cache invalidation:** merging a change to `qa_documentation/` or `qa_radiometric/` into `main` automatically invalidates the `harvested-metadata` entries for the affected collections, so the next scheduled harvest picks up the change without manual intervention.
 
 ---
 
