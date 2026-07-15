@@ -61,7 +61,7 @@
         "links": [
             {
                 "type": "application/pdf",
-                "href": "",
+                "href": "https://raw.githubusercontent.com/EO-DataHub/eodh-qa-data/main/qa_documentation/reports/airbus_spot_data_quality_processes_review.pdf",
                 "title": "EODH - Airbus SPOT Quality Processes Review (QPR)"
             }
         ]
