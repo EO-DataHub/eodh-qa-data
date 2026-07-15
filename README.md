@@ -37,6 +37,8 @@ eodh-qa-data/
   qa-collection-map.json
   qa_documentation/
     {qa_key}_qa_check_quality_processes_review.json
+    reports/
+      {qa_key}_quality_processes_review.pdf
   qa_radiometric/
     {qa_key}_qa_check_radiometric_unc_all_dates.json
 ```
@@ -46,11 +48,13 @@ eodh-qa-data/
 | Asset type | File name pattern |
 |------------|------------------|
 | QPR | `{qa_key}_qa_check_quality_processes_review.json` |
+| QPR full report (PDF) | `qa_documentation/reports/{qa_key}_quality_processes_review.pdf` |
 | Radiometric uncertainty | `{qa_key}_qa_check_radiometric_unc_all_dates.json` |
 
 Examples for a collection with `qa_key` of `airbus_phr_data`:
 
 - `qa_documentation/airbus_phr_data_qa_check_quality_processes_review.json`
+- `qa_documentation/reports/airbus_phr_data_quality_processes_review.pdf`
 - `qa_radiometric/airbus_phr_data_qa_check_radiometric_unc_all_dates.json`
 
 > **Note:** Earlier iterations produced per-year radiometric files (e.g. `..._2022-12-01_2022-12-31.json`). These have been consolidated into single per-collection files. The transformer expects the consolidated single-file format only.
@@ -58,6 +62,8 @@ Examples for a collection with `qa_key` of `airbus_phr_data`:
 ### File content
 
 The transformer does not validate or parse the contents of QA JSON files — it only checks that they exist. No specific schema is enforced at ingestion time.
+
+The QPR JSON's `qa_check_results.links` field holds a single entry pointing at the full QPR report PDF (raw GitHub URL under `qa_documentation/reports/`), replacing the per-result reference links used previously.
 
 ---
 

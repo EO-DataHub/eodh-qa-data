@@ -65,7 +65,7 @@
         "links": [
             {
                 "type": "application/pdf",
-                "href": "",
+                "href": "https://raw.githubusercontent.com/EO-DataHub/eodh-qa-data/main/qa_documentation/reports/PSScene_quality_processes_review.pdf",
                 "title": "EODH - PlanetScope Basic Analytic Quality Processes Review (QPR)"
             }
         ]
