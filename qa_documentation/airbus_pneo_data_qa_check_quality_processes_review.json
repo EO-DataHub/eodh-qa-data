@@ -7,65 +7,29 @@
         "product_information": {
             "product_details": {
                 "value": "excellent",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             },
             "availability_and_accessability": {
                 "value": "basic",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://doi.org/10.1038/sdata.2016.18",
-                        "title": "Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016)"
-                    }
-                ]
+                "links": []
             },
             "product_format_flags_and_metadata": {
                 "value": "excellent",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             },
             "user_documentation": {
                 "value": "good",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             }
         },
         "metrology": {
             "radiometric_calibration_and_characterisation": {
                 "value": "basic",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             },
             "geometric_calibration_and_characterisation": {
                 "value": "basic",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             },
             "metrological_traceability_documentation": {
                 "value": "not assessable",
@@ -77,35 +41,17 @@
             },
             "ancillary_data": {
                 "value": "good",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             }
         },
         "product_generation": {
             "calibration_algorithm": {
                 "value": "basic",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             },
             "geometric_processing": {
                 "value": "good",
-                "links": [
-                    {
-                        "type": "application/pdf",
-                        "href": "https://catalogue-criticalcommunications.airbus.com/hubfs/GEO/PDFs/Pleiades_Neo_UserGuide.pdf",
-                        "title": "Airbus Pléiades Neo User Guide V4. (Date of issue: August 2024)"
-                    }
-                ]
+                "links": []
             },
             "retrieval_algorithm": {
                 "value": "not assessed",
@@ -115,7 +61,14 @@
                 "value": "not assessed",
                 "links": []
             }
-        }
+        },
+        "links": [
+            {
+                "type": "application/pdf",
+                "href": "https://raw.githubusercontent.com/EO-DataHub/eodh-qa-data/main/qa_documentation/reports/airbus_pneo_data_quality_processes_review.pdf",
+                "title": "EODH - Airbus Pléiades Neo Basic MS ORT Quality Processes Review (QPR)"
+            }
+        ]
     },
     "information": "Result criteria follows EDAP EO Mission Quality Assessment Framework - Optical Guidelines, found at: https://earth.esa.int/eogateway/documents/20142/37627/Optical+Mission+Quality+Assessment+Guidelines.pdf/1c269f3f-9e54-9532-b30b-0c884de1431a",
     "qa_check_datetime": "2026-02-22",
