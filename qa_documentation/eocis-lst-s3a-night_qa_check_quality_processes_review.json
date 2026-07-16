@@ -1,0 +1,77 @@
+{
+    "eodh_data_collection": "eocis-lst-s3a-night",
+    "data_id_field": "https://eodatahub.org.uk/api/catalogue/stac/catalogs/public/catalogs/ceda-stac-catalogue/collections/eocis-lst-s3a-night",
+    "uuid": "uuid",
+    "qa_check_name": "Quality Processes Review (QPR)",
+    "qa_check_results": {
+        "product_information": {
+            "product_details": {
+                "value": "ideal",
+                "links": []
+            },
+            "availability_and_accessability": {
+                "value": "excellent",
+                "links": []
+            },
+            "product_format_flags_and_metadata": {
+                "value": "excellent",
+                "links": []
+            },
+            "user_documentation": {
+                "value": "excellent",
+                "links": []
+            }
+        },
+        "metrology": {
+            "radiometric_calibration_and_characterisation": {
+                "value": "ideal",
+                "links": []
+            },
+            "geometric_calibration_and_characterisation": {
+                "value": "ideal",
+                "links": []
+            },
+            "metrological_traceability_documentation": {
+                "value": "good",
+                "links": []
+            },
+            "uncertainty_characterisation": {
+                "value": "excellent",
+                "links": []
+            },
+            "ancillary_data": {
+                "value": "excellent",
+                "links": []
+            }
+        },
+        "product_generation": {
+            "calibration_algorithm": {
+                "value": "excellent",
+                "links": []
+            },
+            "geometric_processing": {
+                "value": "excellent",
+                "links": []
+            },
+            "retrieval_algorithm": {
+                "value": "excellent",
+                "links": []
+            },
+            "product_specific_processing": {
+                "value": "excellent",
+                "links": []
+            }
+        },
+        "links": [
+            {
+                "type": "application/pdf",
+                "href": "https://raw.githubusercontent.com/EO-DataHub/eodh-qa-data/main/qa_documentation/reports/eocis-lst-s3ab_daynight_quality_processes_review.pdf",
+                "title": "EODH - EOCIS LST SLSTR Quality Processes Review (QPR)"
+            }
+        ]
+    },
+    "information": "Result criteria follows EDAP EO Mission Quality Assessment Framework - Optical Guidelines, found at: https://earth.esa.int/eogateway/documents/20142/37627/Optical+Mission+Quality+Assessment+Guidelines.pdf/1c269f3f-9e54-9532-b30b-0c884de1431a",
+    "qa_check_datetime": "2026-02-22",
+    "publisher": "Climate and Earth Observation Group, National Physical Laboratory",
+    "eodh_qa_check_version": 1.0
+}
