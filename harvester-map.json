@@ -17,5 +17,21 @@
   },
   "SkySatCollect": {
     "harvested_metadata_key": "harvested-metadata/planet"
+  },
+  "eocis-lst-s3a-day": {
+    "harvested_metadata_key": "harvested-metadata/https:api.stac.ceda.ac.uk",
+    "collection_id": "eocis-lst-s3a-day"
+  },
+  "eocis-lst-s3a-night": {
+    "harvested_metadata_key": "harvested-metadata/https:api.stac.ceda.ac.uk",
+    "collection_id": "eocis-lst-s3a-night"
+  },
+  "eocis-lst-s3b-day": {
+    "harvested_metadata_key": "harvested-metadata/https:api.stac.ceda.ac.uk",
+    "collection_id": "eocis-lst-s3b-day"
+  },
+  "eocis-lst-s3b-night": {
+    "harvested_metadata_key": "harvested-metadata/https:api.stac.ceda.ac.uk",
+    "collection_id": "eocis-lst-s3b-night"
   }
 }
