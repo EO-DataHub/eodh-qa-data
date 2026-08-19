@@ -33,5 +33,21 @@
   "eocis-lst-s3b-night": {
     "harvested_metadata_key": "harvested-metadata/https:api.stac.ceda.ac.uk",
     "collection_id": "eocis-lst-s3b-night"
+  },
+  "accenture-1-l1c-cogs": {
+    "harvested_metadata_key": "harvested-metadata/accenture-1-l1c-cogs",
+    "collection_id": "accenture-1-l1c-cogs"
+  },
+  "hammer-l1c-cogs": {
+    "harvested_metadata_key": "harvested-metadata/hammer-l1c-cogs",
+    "collection_id": "hammer-l1c-cogs"
+  },
+  "mantis-l1d-cogs": {
+    "harvested_metadata_key": "harvested-metadata/mantis-l1d-cogs",
+    "collection_id": "mantis-l1d-cogs"
+  },
+  "menut-l1c-cogs": {
+    "harvested_metadata_key": "harvested-metadata/menut-l1c-cogs",
+    "collection_id": "menut-l1c-cogs"
   }
 }
